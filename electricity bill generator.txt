@@ -1,0 +1,175 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct customer
+{
+    char name[50];
+    string address;
+    int accountno;
+    int phoneno;
+    float units;
+    float payment;
+} s[10];
+
+int main()
+{
+    string userid;
+    string userPassword;
+    int loginAttempt = 0;
+
+    while (loginAttempt < 5)
+    {
+        cout << "***************************************************************************************** \n";
+        cout << "*********************** Welcome to LIGHT-UP system login***************************** \n";
+        cout << "***************************************************************************************** \n\n";
+        cout << "Please enter your user id: ";
+        cin >> userid;
+        cout << "Please enter your user password: ";
+        cin >> userPassword;
+
+        if (userid == "11003" && userPassword == "cpp1010")
+        {
+            cout << "***************************************************************************************** \n";
+            cout << "********** Welcome to LIGHT-UP electricity bill calculator******************************* \n";
+            cout << "***************************************************************************************** \n\n";
+            cout << "Enter costomer`s information Costomer: " << endl;
+            cout << "dont use space between the words sue_: " << endl;
+
+            // storing information
+            for (int i = 0; i < 1; ++i)
+            {
+
+
+                cout << "Enter name: ";
+                cin >> s[i].name;
+
+                cout << "Enter accountno: ";
+                cin >> s[i].accountno;
+
+                cout << "Enter phoneno: ";
+                cin >> s[i].phoneno;
+
+
+
+                cout << "Enter address: ";
+                cin >> s[i].address;
+
+                cout << "enter the units burned:(and press enter to genarate the bill)" << endl;
+                cin >> s[i].units;
+
+                s[i].payment = s[i].units * 100;
+
+
+
+                cout << endl;
+                cout << endl;
+
+            }
+
+            cout << "///////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" << endl;
+            cout << "////////////////////////////ELECTRYCITY BILL\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" << endl;
+            cout << "///////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" << endl;
+
+            cout << "every one unit charges 100 bugs" << endl;
+
+            cout << "ELECTRYCITY BILL" << endl;
+
+            // Displaying information
+            for (int i = 0; i < 1; ++i)
+            {
+                cout << "\n******************* account no: " << s[i].accountno << endl;
+                cout << "*********************Name: " << s[i].name << endl;
+                cout << "*********************phone no.: " << s[i].phoneno << endl;
+                cout << "*********************adrress.: " << s[i].address << endl;
+                cout << "*********************payment.: " << s[i].payment << endl;
+
+                cout << "for hepl contact the devoloper Denver -hot line 0753406402 \n email- denvermarlon23@gmail.com" << endl;
+
+                cout << "///////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" << endl;
+            }
+
+            return 0;
+
+        }
+        else if (userid == "11004" && userPassword == "cpp1011")
+        {
+            cout << "***************************************************************************************** \n";
+            cout << "********** Welcome to LIGHT-UP electricity bill calculator******************************* \n";
+            cout << "***************************************************************************************** \n\n";
+            cout << "dont use space between the words sue_: " << endl;
+            cout << "Enter costomer`s information Costomer: " << endl;
+
+            // storing information
+            for (int i = 0; i < 1; ++i)
+            {
+              
+
+                cout << "Enter name: ";
+                cin >> s[i].name;
+
+                cout << "Enter accountno: ";
+                cin >> s[i].accountno;
+
+                cout << "Enter phoneno: ";
+                cin >> s[i].phoneno;
+
+
+
+                cout << "Enter address: ";
+
+                cin >> s[i].address;
+
+                cout << "enter the units burned:(and press enter to genarate the bill)" << endl;
+                cin >> s[i].units;
+
+                s[i].payment = s[i].units * 100;
+
+
+
+                cout << endl;
+                cout << endl;
+
+            }
+
+            cout << "///////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" << endl;
+            cout << "////////////////////////////ELECTRYCITY BILL\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" << endl;
+            cout << "///////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" << endl;
+
+            cout << "***********every one unit charges 100 bugs**************" << endl;
+
+            // Displaying information
+            for (int i = 0; i < 1; ++i)
+            {
+                cout << "\n******************* account no: " << s[i].accountno << endl;
+                cout << "*********************Name: " << s[i].name << endl;
+                cout << "*********************phone no.: " << s[i].phoneno << endl;
+                cout << "*********************adrress.: " << s[i].address << endl;
+                cout << "*********************payment.: " << s[i].payment << endl;
+            
+                cout << "for hepl contact the devoloper Denver -hot line 0753406402 \n email- denvermarlon23@gmail.com\n" << endl;
+
+                cout << "///////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" << endl;
+            }
+
+            return 0;
+
+
+        }
+        else
+        {
+        cout << "invalid userid or password plz try again \a" << endl;
+        cout << "for hepl contact the devoloper Denver -hot line 0753406402 email- denvermarlon23@gmail.com" << endl ;
+            loginAttempt++;
+        }
+    }
+    if (loginAttempt == 5)
+    {
+        cout << " ******************************************************** \a" << endl;
+        cout << "*****************************sorry**********************\a" << endl;;
+        cout <<" ******************************************************** \a" << endl;;
+        cout << "Too many login attempts! The program will now terminate. \a" << endl;;
+        return 0;
+    }
+
+    cout << "Thank you for logging in.\n";
+}
